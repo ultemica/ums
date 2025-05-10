@@ -12,9 +12,4 @@ export const DefSchema = z.object({
   name: z.string()
 })
 
-export const ItemSchema = z.object({
-  price: UInt16,
-  count: UInt8
-})
-
 export type Def = z.infer<typeof DefSchema>
