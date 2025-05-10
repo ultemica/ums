@@ -1,0 +1,36 @@
+{
+  "name": "ums",
+  "version": "0.0.1",
+  "description": "Unsafe Memory Simulator",
+  "author": "ultemica",
+  "private": true,
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "start": "bun dist/index.js",
+    "prebuild": "rimraf dist",
+    "build": "bun build src/index.ts --minify --outdir dist --outfile=index.js",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.13"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/cz-commitlint": "^19.8.1",
+    "@types/bun": "^1.2.12",
+    "@types/node": "^22.15.17",
+    "commitizen": "^4.3.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3"
+  }
+}
